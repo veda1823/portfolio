@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vedalakshmi B S | Computer Science Undergrad & Full-Stack Developer</title>
+  <meta name="description" content="Personal portfolio of Vedalakshmi B S, a Computer Science Engineering student at Muthoot Institute of Technology and Science (CGPA 8.96). Full-stack developer, UI intern at SwarmLens, and problem solver.">
+  <meta name="keywords" content="Vedalakshmi B S, Vedalakshmi, Portfolio, Computer Science, MITS, Web Developer, Full Stack, React, Python, SwarmLens, KTU Activity Point Calculator">
+  <meta name="author" content="Vedalakshmi B S">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vedalakshmi B S | Developer Portfolio">
+  <meta property="og:description" content="B.Tech Computer Science student, Full-Stack Developer, and UI Development Intern. Building practical software and assistive technology.">
+  <meta property="og:url" content="https://github.com/veda1823">
+
+  <!-- Google Fonts: Inter & Fira Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Subtle Interactive Canvas Background -->
+  <canvas id="canvas-bg"></canvas>
+
+  <!-- =========================================================================
+       Sticky Navigation Bar
+       ========================================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Vedalakshmi B S Home">
+        <span class="brand-bracket">&lt;</span>Veda<span class="brand-bracket"> /&gt;</span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#github" class="nav-link">Coding</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions (Theme & Resume) -->
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle Theme">
+          <!-- Populated by JS -->
+        </button>
+
+        <a href="assets/docs/Vedalakshmi_B_S_Resume.pdf" download="Vedalakshmi_B_S_Resume.pdf" class="btn-resume" title="Download Resume">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+          </svg>
+          <span>Resume</span>
+        </a>
+
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =======================================================================
+         1. Hero Section
+         ======================================================================= -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span>Available for SDE Internships &amp; Placements</span>
+          </div>
+
+          <p class="hero-greeting">Hello, world! I am</p>
+          <h1 class="hero-name">Vedalakshmi B S</h1>
+
+          <div class="hero-roles" aria-live="polite">
+            <span class="typed-text" id="typed-text"></span>
+            <span class="cursor" aria-hidden="true"></span>
+          </div>
+
+          <p class="hero-bio">
+            Computer Science undergraduate at Muthoot Institute of Technology and Science (<strong>CGPA 8.96</strong>) with hands-on expertise in full-stack web engineering, Python problem solving, and database systems. Passionate about architecting practical, responsive applications that solve real-world problems.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#projects" class="btn-primary">
+              <span>Explore Projects</span>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <a href="assets/docs/Vedalakshmi_B_S_Resume.pdf" download="Vedalakshmi_B_S_Resume.pdf" class="btn-secondary">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              <span>Download Resume</span>
+            </a>
+          </div>
+
+          <!-- Social and Profile Quick Links -->
+          <div class="hero-socials">
+            <a href="https://github.com/veda1823" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub - @veda1823">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/vedalakshmi-b-s-a53536385" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn - Vedalakshmi B S">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+            </a>
+            <a href="https://www.cloudskillsboost.google/public_profiles/78771005-3f91-4b56-a97d-d9c520f4bd51" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Google Cloud Skills Boost Profile">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"/></svg>
+            </a>
+            <a href="mailto:vedalakshmi777@gmail.com" class="social-icon-btn" title="Send Email">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Terminal / Code Preview Card -->
+        <div class="hero-preview">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">veda-developer-profile.ts</span>
+              <span style="font-size: 0.7rem; color: #64748b;">TypeScript</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="code-keyword">const</span> <span class="code-var">developer</span> = {</p>
+              <p style="padding-left: 18px;"><span class="code-prop">name</span>: <span class="code-str">"Vedalakshmi B S"</span>,</p>
+              <p style="padding-left: 18px;"><span class="code-prop">education</span>: {</p>
+              <p style="padding-left: 36px;"><span class="code-prop">degree</span>: <span class="code-str">"B.Tech in CSE"</span>,</p>
+              <p style="padding-left: 36px;"><span class="code-prop">institution</span>: <span class="code-str">"Muthoot Inst of Tech & Science"</span>,</p>
+              <p style="padding-left: 36px;"><span class="code-prop">cgpa</span>: <span class="code-num">8.96</span>,</p>
+              <p style="padding-left: 36px;"><span class="code-prop">academicHighlights</span>: [<span class="code-str">"10th: 100%"</span>, <span class="code-str">"12th: 98.6%"</span>]</p>
+              <p style="padding-left: 18px;">},</p>
+              <p style="padding-left: 18px;"><span class="code-prop">internship</span>: <span class="code-str">"UI Development Intern @ SwarmLens"</span>,</p>
+              <p style="padding-left: 18px;"><span class="code-prop">coreStack</span>: [<span class="code-str">"React"</span>, <span class="code-str">"Node.js"</span>, <span class="code-str">"Python"</span>, <span class="code-str">"Java"</span>, <span class="code-str">"MySQL"</span>],</p>
+              <p style="padding-left: 18px;"><span class="code-prop">openForWork</span>: <span class="code-keyword">true</span></p>
+              <p>};</p>
+              <p class="code-comment">// Ready to collaborate and ship impactful software 🚀</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         2. About Me Section
+         ======================================================================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">01 // Background</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-desc">Passionate engineer combining academic rigor with hands-on software development.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-content">
+            <p>
+              I am a <strong>Computer Science and Engineering undergraduate</strong> at <strong>Muthoot Institute of Technology and Science (MITS)</strong> in Kochi, Kerala, holding a <strong>CGPA of 8.96</strong>. Throughout my education, I have maintained a track record of academic dedication—achieving <strong>100% in 10th Standard (SSLC)</strong> and <strong>98.6% in 12th Higher Secondary Education</strong>.
+            </p>
+            <p>
+              My engineering focus centers on building responsive full-stack applications, assistive human-computer interaction tools (such as real-time Computer Vision sign language recognition), and robust relational database systems.
+            </p>
+            <p>
+              Through my role as a <strong>UI Development Intern at SwarmLens Pvt. Ltd.</strong>, I gained valuable practical exposure to professional frontend engineering workflows, agile sprints, collaborative component architectures, and clean code principles.
+            </p>
+          </div>
+
+          <!-- Highlight Metric Cards (100% Truthful) -->
+          <div class="about-highlights-grid">
+            <div class="highlight-card">
+              <span class="highlight-icon">🎓</span>
+              <span class="highlight-value">8.96</span>
+              <span class="highlight-title">B.Tech CSE CGPA</span>
+              <span class="highlight-desc">Muthoot Institute of Technology and Science (2023–Present)</span>
+            </div>
+
+            <div class="highlight-card">
+              <span class="highlight-icon">⭐</span>
+              <span class="highlight-value">100% &bull; 98.6%</span>
+              <span class="highlight-title">Academic Milestones</span>
+              <span class="highlight-desc">100% in SSLC (10th) &amp; 98.6% in Higher Secondary (12th)</span>
+            </div>
+
+            <div class="highlight-card">
+              <span class="highlight-icon">💼</span>
+              <span class="highlight-value">SwarmLens</span>
+              <span class="highlight-title">UI Development Intern</span>
+              <span class="highlight-desc">Professional frontend engineering and team workflows (2025)</span>
+            </div>
+
+            <div class="highlight-card">
+              <span class="highlight-icon">☁️</span>
+              <span class="highlight-value">Silver League</span>
+              <span class="highlight-title">Google Cloud Skills Boost</span>
+              <span class="highlight-desc">Cloud computing foundational labs and verified badges</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. Education Section
+         ======================================================================= -->
+    <section class="section" id="education" style="background: var(--bg-surface);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">02 // Academic Path</span>
+          <h2 class="section-title">Education</h2>
+          <p class="section-desc">Consistent academic excellence across higher secondary and engineering studies.</p>
+        </div>
+
+        <div class="education-timeline">
+          <!-- B.Tech Card -->
+          <div class="edu-card">
+            <span class="edu-marker"></span>
+            <div class="edu-header">
+              <h3 class="edu-degree">Bachelor of Technology in Computer Science and Engineering</h3>
+              <span class="edu-badge">CGPA: 8.96</span>
+            </div>
+            <div class="edu-institution">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5zM8 8.46 1.758 5.963 8 3.05l6.242 2.913L8 8.46z"/></svg>
+              <span>Muthoot Institute of Technology and Science (MITS)</span>
+            </div>
+            <div class="edu-meta">
+              <span>📍 Kochi, Kerala</span>
+              <span>🗓️ 2023 &ndash; Present</span>
+            </div>
+          </div>
+
+          <!-- 12th Card -->
+          <div class="edu-card">
+            <span class="edu-marker"></span>
+            <div class="edu-header">
+              <h3 class="edu-degree">12th Standard (Higher Secondary Education)</h3>
+              <span class="edu-badge">Score: 98.6%</span>
+            </div>
+            <div class="edu-institution">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5zM8 8.46 1.758 5.963 8 3.05l6.242 2.913L8 8.46z"/></svg>
+              <span>Nanminda Higher Secondary School</span>
+            </div>
+            <div class="edu-meta">
+              <span>📍 Kozhikode, Kerala</span>
+              <span>🗓️ 2020 &ndash; 2022</span>
+            </div>
+          </div>
+
+          <!-- 10th Card -->
+          <div class="edu-card">
+            <span class="edu-marker"></span>
+            <div class="edu-header">
+              <h3 class="edu-degree">10th Standard (SSLC)</h3>
+              <span class="edu-badge perfect">Score: 100% Perfect</span>
+            </div>
+            <div class="edu-institution">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5zM8 8.46 1.758 5.963 8 3.05l6.242 2.913L8 8.46z"/></svg>
+              <span>Nanminda Higher Secondary School</span>
+            </div>
+            <div class="edu-meta">
+              <span>📍 Kozhikode, Kerala</span>
+              <span>🗓️ 2019 &ndash; 2020</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. Technical Skills Section
+         ======================================================================= -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">03 // Technical Stack</span>
+          <h2 class="section-title">Skills &amp; Technologies</h2>
+          <p class="section-desc">Languages, libraries, databases, and development tooling actively used in projects.</p>
+        </div>
+
+        <!-- Filter navigation -->
+        <div class="skills-filter-nav">
+          <button class="filter-btn active" data-filter="all">All Skills</button>
+          <button class="filter-btn" data-filter="lang">Languages</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn" data-filter="backend">Backend &amp; DB</button>
+          <button class="filter-btn" data-filter="tools">Tools &amp; Cloud</button>
+          <button class="filter-btn" data-filter="core">Core CS</button>
+        </div>
+
+        <div class="skills-grid" id="skills-grid">
+          <!-- Programming Languages -->
+          <div class="skill-card" data-category="lang">
+            <div class="skill-icon">☕</div>
+            <div class="skill-info">
+              <h4 class="skill-name">Java</h4>
+              <span class="skill-category-tag">NPTEL IIT Certified</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="lang">
+            <div class="skill-icon">🐍</div>
+            <div class="skill-info">
+              <h4 class="skill-name">Python</h4>
+              <span class="skill-category-tag">Computer Vision &amp; Scripting</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="lang">
+            <div class="skill-icon">⚡</div>
+            <div class="skill-info">
+              <h4 class="skill-name">JavaScript (ES6+)</h4>
+              <span class="skill-category-tag">Modern Web &amp; Async</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="lang">
+            <div class="skill-icon">🔷</div>
+            <div class="skill-info">
+              <h4 class="skill-name">C / C++</h4>
+              <span class="skill-category-tag">Problem Solving &amp; DSA</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="lang">
+            <div class="skill-icon">📘</div>
+            <div class="skill-info">
+              <h4 class="skill-name">TypeScript</h4>
+              <span class="skill-category-tag">Type-Safe Application Code</span>
+            </div>
+          </div>
+
+          <!-- Frontend -->
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-icon">⚛️</div>
+            <div class="skill-info">
+              <h4 class="skill-name">React</h4>
+              <span class="skill-category-tag">Component Architecture</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-icon">🌐</div>
+            <div class="skill-info">
+              <h4 class="skill-name">HTML5 &amp; CSS3</h4>
+              <span class="skill-category-tag">Responsive UI &amp; Grid/Flex</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-icon">🎨</div>
+            <div class="skill-info">
+              <h4 class="skill-name">UI Engineering</h4>
+              <span class="skill-category-tag">SwarmLens Intern Experience</span>
+            </div>
+          </div>
+
+          <!-- Backend & Database -->
+          <div class="skill-card" data-category="backend">
+            <div class="skill-icon">🟢</div>
+            <div class="skill-info">
+              <h4 class="skill-name">Node.js &amp; Express</h4>
+              <span class="skill-category-tag">RESTful APIs &amp; Routing</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <div class="skill-icon">🐬</div>
+            <div class="skill-info">
+              <h4 class="skill-name">MySQL &amp; SQL</h4>
+              <span class="skill-category-tag">Relational Schemas &amp; Queries</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <div class="skill-icon">🗄️</div>
+            <div class="skill-info">
+              <h4 class="skill-name">DBMS Architecture</h4>
+              <span class="skill-category-tag">ACID &amp; Schema Normalization</span>
+            </div>
+          </div>
+
+          <!-- Tools & Cloud -->
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon">🐙</div>
+            <div class="skill-info">
+              <h4 class="skill-name">Git &amp; GitHub</h4>
+              <span class="skill-category-tag">Version Control &amp; Collab</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon">💻</div>
+            <div class="skill-info">
+              <h4 class="skill-name">VS Code</h4>
+              <span class="skill-category-tag">Primary Development IDE</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon">☁️</div>
+            <div class="skill-info">
+              <h4 class="skill-name">Google Cloud Basics</h4>
+              <span class="skill-category-tag">Skills Boost Silver League</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon">▲</div>
+            <div class="skill-info">
+              <h4 class="skill-name">Vercel</h4>
+              <span class="skill-category-tag">Frontend &amp; App Deployment</span>
+            </div>
+          </div>
+
+          <!-- Core CS -->
+          <div class="skill-card" data-category="core">
+            <div class="skill-icon">🧩</div>
+            <div class="skill-info">
+              <h4 class="skill-name">Data Structures &amp; Algorithms</h4>
+              <span class="skill-category-tag">Core Computer Science</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="core">
+            <div class="skill-icon">📐</div>
+            <div class="skill-info">
+              <h4 class="skill-name">Object-Oriented Programming</h4>
+              <span class="skill-category-tag">Polymorphism, Inheritance, Design</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="core">
+            <div class="skill-icon">🤝</div>
+            <div class="skill-info">
+              <h4 class="skill-name">Team Collaboration</h4>
+              <span class="skill-category-tag">Communication &amp; Code Review</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. Experience / Internship Section
+         ======================================================================= -->
+    <section class="section" id="experience" style="background: var(--bg-surface);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">04 // Industry Experience</span>
+          <h2 class="section-title">Work Experience &amp; Internship</h2>
+          <p class="section-desc">Hands-on practical development experience in a professional software environment.</p>
+        </div>
+
+        <div class="experience-container">
+          <div class="experience-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-role">UI Development Intern</h3>
+                <h4 class="exp-company">
+                  <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3Z"/></svg>
+                  <span>SwarmLens Pvt. Ltd.</span>
+                </h4>
+              </div>
+              <span class="exp-period-badge">2025 &bull; Internship</span>
+            </div>
+
+            <div class="exp-meta">
+              <span>📍 Kochi, Kerala</span>
+              <span>💼 Frontend &amp; UI Engineering</span>
+            </div>
+
+            <div class="exp-bullets">
+              <div class="exp-bullet-item">
+                <span class="bullet-bullet">▹</span>
+                <span>Worked on UI development tasks and collaborative software development activities for web-based products.</span>
+              </div>
+              <div class="exp-bullet-item">
+                <span class="bullet-bullet">▹</span>
+                <span>Gained direct exposure to professional development workflows, agile practices, and team-based project environments.</span>
+              </div>
+              <div class="exp-bullet-item">
+                <span class="bullet-bullet">▹</span>
+                <span>Improved and strengthened understanding of modern frontend development, UI components, and software engineering standards.</span>
+              </div>
+            </div>
+
+            <div class="exp-tech-tags">
+              <span class="tech-tag">UI Development</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">HTML5 &amp; CSS3</span>
+              <span class="tech-tag">Git &amp; Version Control</span>
+              <span class="tech-tag">Collaborative Workflows</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. Projects Section (Core Highlight)
+         ======================================================================= -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">05 // Built Projects</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-desc">Key applications developed across full-stack web platforms, computer vision, and database systems.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: KTU Activity Point Calculator Portal (FEATURED) -->
+          <div class="project-card featured">
+            <span class="project-badge-top badge-featured">★ Featured 2025</span>
+            <div class="project-card-header">
+              <span class="project-category">Full-Stack Web Portal &bull; Personal Mini Project</span>
+              <h3 class="project-title">KTU Activity Point Calculator Portal</h3>
+            </div>
+            <div class="project-card-body">
+              <p class="project-desc">
+                Developed a responsive web portal for calculating, monitoring, and managing APJ Abdul Kalam Technological University (KTU) activity points required for graduation.
+              </p>
+              <div class="project-features">
+                <div class="feature-item">
+                  <span class="feature-check">✓</span>
+                  <span>Designed role-based interfaces for Admin, Teacher, and Student with responsive UI components.</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-check">✓</span>
+                  <span>Implemented dashboard layouts, upload modules, and frontend pages using React and custom CSS.</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-check">✓</span>
+                  <span>Engineered backend routing and calculation services using Node.js and Express.</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-check">✓</span>
+                  <span>Version controlled with Git/GitHub; deployed on Vercel for high online availability.</span>
+                </div>
+              </div>
+              <div class="project-tech-list">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">Vercel</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <div class="project-links">
+                <a href="https://clawhub.ai/veda1823/veda-greetings" target="_blank" rel="noopener noreferrer" class="btn-project-link">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  <span>Live Demo</span>
+                </a>
+                <a href="https://github.com/veda1823" target="_blank" rel="noopener noreferrer" class="btn-project-link">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                  <span>Code</span>
+                </a>
+              </div>
+              <button class="btn-details" data-project-id="ktu">
+                <span>Architecture</span>
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 2: Sign Language Detector -->
+          <div class="project-card">
+            <span class="project-badge-top badge-ai">Computer Vision</span>
+            <div class="project-card-header">
+              <span class="project-category">Assistive AI &bull; Human-Computer Interaction</span>
+              <h3 class="project-title">Sign Language Detector</h3>
+            </div>
+            <div class="project-card-body">
+              <p class="project-desc">
+                Built a real-time sign language detection and translation system designed to bridge communication gaps for hearing and speech impaired individuals.
+              </p>
+              <div class="project-features">
+                <div class="feature-item">
+                  <span class="feature-check">✓</span>
+                  <span>Implemented precise hand gesture recognition and 21 landmark tracking using Google MediaPipe.</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-check">✓</span>
+                  <span>Captured and processed live webcam video streams with Python and OpenCV.</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-check">✓</span>
+                  <span>Integrated text-to-speech (TTS) functionality to convert recognized gestures into spoken voice.</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-check">✓</span>
+                  <span>Engineered an accessible interface for intuitive human-computer interaction.</span>
+                </div>
+              </div>
+              <div class="project-tech-list">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">OpenCV</span>
+                <span class="tech-tag">MediaPipe</span>
+                <span class="tech-tag">Text-to-Speech</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <div class="project-links">
+                <a href="https://github.com/veda1823" target="_blank" rel="noopener noreferrer" class="btn-project-link">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                  <span>Code</span>
+                </a>
+              </div>
+              <button class="btn-details" data-project-id="sign">
+                <span>Architecture</span>
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 3: Hostel Allocator -->
+          <div class="project-card">
+            <span class="project-badge-top badge-db">Database System</span>
+            <div class="project-card-header">
+              <span class="project-category">SQL &bull; Relational DBMS Architecture</span>
+              <h3 class="project-title">Hostel Allocator</h3>
+            </div>
+            <div class="project-card-body">
+              <p class="project-desc">
+                Developed an institutional hostel management database solution for student registration, room allocation, and occupancy tracking.
+              </p>
+              <div class="project-features">
+                <div class="feature-item">
+                  <span class="feature-check">✓</span>
+                  <span>Implemented room management and occupancy tracking using normalized relational schemas.</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-check">✓</span>
+                  <span>Automated room allocation processes to improve operational efficiency and eliminate manual conflict errors.</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-check">✓</span>
+                  <span>Created an admin dashboard for real-time monitoring of hostel occupancy and student records.</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-check">✓</span>
+                  <span>Enforced relational ACID transactions to ensure database consistency.</span>
+                </div>
+              </div>
+              <div class="project-tech-list">
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">DBMS</span>
+                <span class="tech-tag">Normalization</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <div class="project-links">
+                <a href="https://github.com/veda1823" target="_blank" rel="noopener noreferrer" class="btn-project-link">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                  <span>Code</span>
+                </a>
+              </div>
+              <button class="btn-details" data-project-id="hostel">
+                <span>Architecture</span>
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 4: Team Workspace Manager (Verified GitHub repo) -->
+          <div class="project-card">
+            <div class="project-card-header">
+              <span class="project-category">Collaborative Tool &bull; Public Repository</span>
+              <h3 class="project-title">Team Workspace Manager</h3>
+            </div>
+            <div class="project-card-body">
+              <p class="project-desc">
+                Interactive productivity application designed to facilitate team project management, workspace organization, and agile sprint tracking.
+              </p>
+              <div class="project-tech-list">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">Git</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <div class="project-links">
+                <a href="https://github.com/veda1823/Team-Workspace-Manager" target="_blank" rel="noopener noreferrer" class="btn-project-link">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                  <span>Repository</span>
+                </a>
+              </div>
+              <button class="btn-details" data-project-id="workspace">
+                <span>Details</span>
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 5: Movie Ticket Booking System (Verified GitHub repo) -->
+          <div class="project-card">
+            <div class="project-card-header">
+              <span class="project-category">Backend API &bull; Public Repository</span>
+              <h3 class="project-title">Movie Ticket Booking System</h3>
+            </div>
+            <div class="project-card-body">
+              <p class="project-desc">
+                Backend architecture supporting cinema schedules, theater management, and transactional seat reservation workflows.
+              </p>
+              <div class="project-tech-list">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">REST APIs</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <div class="project-links">
+                <a href="https://github.com/veda1823/Movie-Ticket-Booking-System" target="_blank" rel="noopener noreferrer" class="btn-project-link">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                  <span>Repository</span>
+                </a>
+              </div>
+              <button class="btn-details" data-project-id="movie">
+                <span>Details</span>
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 6: Course Selling Application (Verified GitHub repo) -->
+          <div class="project-card">
+            <div class="project-card-header">
+              <span class="project-category">Full-Stack Application &bull; Public Repository</span>
+              <h3 class="project-title">Course Selling Platform</h3>
+            </div>
+            <div class="project-card-body">
+              <p class="project-desc">
+                Web application featuring course catalogs, student user authentication, curriculum browsing, and enrollment endpoints.
+              </p>
+              <div class="project-tech-list">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">Full-Stack</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <div class="project-links">
+                <a href="https://github.com/veda1823/course-selling-application" target="_blank" rel="noopener noreferrer" class="btn-project-link">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                  <span>Repository</span>
+                </a>
+              </div>
+              <button class="btn-details" data-project-id="course">
+                <span>Details</span>
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         7. Certifications & Courses Section
+         ======================================================================= -->
+    <section class="section" id="certifications" style="background: var(--bg-surface);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">06 // Professional Learning</span>
+          <h2 class="section-title">Certifications &amp; Courses</h2>
+          <p class="section-desc">Formal technical certifications and structured engineering courses completed.</p>
+        </div>
+
+        <div class="cert-grid">
+          <!-- Cert 1: NPTEL Java -->
+          <div class="cert-card">
+            <div class="cert-icon">📜</div>
+            <div class="cert-content">
+              <h3 class="cert-title">Programming in Java</h3>
+              <p class="cert-issuer">NPTEL &bull; IIT Kharagpur</p>
+              <span class="cert-badge">Academic Certification</span>
+            </div>
+          </div>
+
+          <!-- Cert 2: Zero Pixels MERN -->
+          <div class="cert-card">
+            <div class="cert-icon">⚛️</div>
+            <div class="cert-content">
+              <h3 class="cert-title">End-to-End Project Lifecycle using MERN Stack</h3>
+              <p class="cert-issuer">Zero Pixels Technologies</p>
+              <span class="cert-badge">Full-Stack Cohort</span>
+            </div>
+          </div>
+
+          <!-- Cert 3: 100xDevs -->
+          <div class="cert-card">
+            <div class="cert-icon">🚀</div>
+            <div class="cert-content">
+              <h3 class="cert-title">Web Development + DevOps</h3>
+              <p class="cert-issuer">100xDevs (Harkirat Singh)</p>
+              <span class="cert-badge">Comprehensive Engineering</span>
+            </div>
+          </div>
+
+          <!-- Cert 4: QnaydS LLP Internship -->
+          <div class="cert-card">
+            <div class="cert-icon">💼</div>
+            <div class="cert-content">
+              <h3 class="cert-title">Web Development Internship Certification</h3>
+              <p class="cert-issuer">QnaydS LLP</p>
+              <span class="cert-badge">Practical Internship</span>
+            </div>
+          </div>
+
+          <!-- Cert 5: Google Cloud Skills Boost -->
+          <div class="cert-card">
+            <div class="cert-icon">☁️</div>
+            <div class="cert-content">
+              <h3 class="cert-title">Google Cloud Skills Boost</h3>
+              <p class="cert-issuer">Google Cloud</p>
+              <span class="cert-badge">Silver League Achiever</span>
+            </div>
+          </div>
+
+          <!-- Cert 6: Cambridge Linguaskill -->
+          <div class="cert-card">
+            <div class="cert-icon">🌐</div>
+            <div class="cert-content">
+              <h3 class="cert-title">Cambridge Linguaskill English Assessment</h3>
+              <p class="cert-issuer">Cambridge English</p>
+              <span class="cert-badge">CEFR Level B1</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         8. Achievements & Workshops Section
+         ======================================================================= -->
+    <section class="section" id="achievements">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">07 // Honors &amp; Summits</span>
+          <h2 class="section-title">Achievements &amp; Events</h2>
+          <p class="section-desc">Academic excellence awards and active participation in engineering summits and workshops.</p>
+        </div>
+
+        <div class="achievements-grid">
+          <div class="achievement-card">
+            <span class="achieve-icon">🏆</span>
+            <h3 class="achieve-title">100% in 10th SSLC &amp; 98.6% in 12th HSE</h3>
+            <p class="achieve-desc">Secured a perfect 100% score in Secondary School Leaving Certificate (SSLC) and 98.6% in Higher Secondary Board Examinations.</p>
+            <span class="achieve-tag">Academic Excellence</span>
+          </div>
+
+          <div class="achievement-card">
+            <span class="achieve-icon">🌐</span>
+            <h3 class="achieve-title">IEEE Techsortium 2025</h3>
+            <p class="achieve-desc">Active participant in IEEE Techsortium 2025, engaging in technical deep-dives on modern software engineering.</p>
+            <span class="achieve-tag">IEEE Technical Event</span>
+          </div>
+
+          <div class="achievement-card">
+            <span class="achieve-icon">🎓</span>
+            <h3 class="achieve-title">IEEE YESS'24 Summit</h3>
+            <p class="achieve-desc">Participated in the Yearly Engineering Students Summit (IEEE YESS'24), collaborating with engineering student delegates.</p>
+            <span class="achieve-tag">Engineering Summit</span>
+          </div>
+
+          <div class="achievement-card">
+            <span class="achieve-icon">☁️</span>
+            <h3 class="achieve-title">IEEE Cloud Computing Workshop</h3>
+            <p class="achieve-desc">Completed hands-on training on distributed cloud computing paradigms and containerization workflows.</p>
+            <span class="achieve-tag">Hands-on Workshop</span>
+          </div>
+
+          <div class="achievement-card">
+            <span class="achieve-icon">🏛️</span>
+            <h3 class="achieve-title">Tathva'23 &ndash; NIT Calicut</h3>
+            <p class="achieve-desc">Participated in South India's largest technical fest conducted by the National Institute of Technology (NIT) Calicut.</p>
+            <span class="achieve-tag">NIT Calicut Tech Fest</span>
+          </div>
+
+          <div class="achievement-card">
+            <span class="achieve-icon">💻</span>
+            <h3 class="achieve-title">Technical Web &amp; Cloud Workshops</h3>
+            <p class="achieve-desc">Completed multiple specialized technical workshops focusing on full-stack web applications and cloud infrastructure.</p>
+            <span class="achieve-tag">Continuous Upskilling</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         9. GitHub / Coding Activity Section
+         ======================================================================= -->
+    <section class="section" id="github" style="background: var(--bg-surface);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">08 // Code &amp; Repositories</span>
+          <h2 class="section-title">GitHub &amp; Coding Activity</h2>
+          <p class="section-desc">Public codebase tracking my continuous development and problem solving journey.</p>
+        </div>
+
+        <div class="coding-container">
+          <div class="github-profile-card">
+            <div class="github-header">
+              <div class="github-user-info">
+                <div class="github-avatar">V</div>
+                <div>
+                  <h3 class="github-user-name">Vedalakshmi B S</h3>
+                  <a href="https://github.com/veda1823" target="_blank" rel="noopener noreferrer" class="github-handle">@veda1823 on GitHub ↗</a>
+                </div>
+              </div>
+              <a href="https://github.com/veda1823" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                <span>View Full Profile</span>
+              </a>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="github-stats-row">
+              <div class="git-stat-box">
+                <span class="git-stat-number">15+</span>
+                <span class="git-stat-label">Public Repositories</span>
+              </div>
+              <div class="git-stat-box">
+                <span class="git-stat-number">5+</span>
+                <span class="git-stat-label">Core Languages</span>
+              </div>
+              <div class="git-stat-box">
+                <span class="git-stat-number">Silver</span>
+                <span class="git-stat-label">Cloud League</span>
+              </div>
+              <div class="git-stat-box">
+                <span class="git-stat-number">2026</span>
+                <span class="git-stat-label">Active Commits</span>
+              </div>
+            </div>
+
+            <!-- Real Repositories Grid -->
+            <div class="github-repos-grid">
+              <a href="https://github.com/veda1823/Team-Workspace-Manager" target="_blank" rel="noopener noreferrer" class="mini-repo-card">
+                <div class="mini-repo-name">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5v-9zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8V1.5z"/></svg>
+                  <span>Team-Workspace-Manager</span>
+                </div>
+                <p class="mini-repo-desc">Collaborative team task organizer and management dashboard.</p>
+                <div class="mini-repo-meta">
+                  <span><span class="lang-dot lang-js"></span>JavaScript</span>
+                  <span>⭐ Public</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/veda1823/Movie-Ticket-Booking-System" target="_blank" rel="noopener noreferrer" class="mini-repo-card">
+                <div class="mini-repo-name">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5v-9zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8V1.5z"/></svg>
+                  <span>Movie-Ticket-Booking</span>
+                </div>
+                <p class="mini-repo-desc">Backend services for theater scheduling and ticket transactions.</p>
+                <div class="mini-repo-meta">
+                  <span><span class="lang-dot lang-js"></span>JavaScript</span>
+                  <span>⭐ Public</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/veda1823/course-selling-application" target="_blank" rel="noopener noreferrer" class="mini-repo-card">
+                <div class="mini-repo-name">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5v-9zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8V1.5z"/></svg>
+                  <span>course-selling-app</span>
+                </div>
+                <p class="mini-repo-desc">Course purchase workflow and student enrollment platform.</p>
+                <div class="mini-repo-meta">
+                  <span><span class="lang-dot lang-js"></span>JavaScript</span>
+                  <span>⭐ Public</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/veda1823/recursion" target="_blank" rel="noopener noreferrer" class="mini-repo-card">
+                <div class="mini-repo-name">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5v-9zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8V1.5z"/></svg>
+                  <span>recursion &amp; Linkedlist</span>
+                </div>
+                <p class="mini-repo-desc">Data structure algorithms and problem solving implementations.</p>
+                <div class="mini-repo-meta">
+                  <span><span class="lang-dot lang-py"></span>Python</span>
+                  <span>⭐ Public</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         10. Contact Section
+         ======================================================================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">09 // Let's Connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-desc">Actively seeking Software Engineering internships, placement opportunities, and collaborations.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Recruiter Info & Quick Copy Card -->
+          <div class="contact-info-card">
+            <h3 class="contact-info-title">Let's build something together!</h3>
+            <p class="contact-info-desc">
+              Whether you have an internship opening, a question about my projects, or would like to review my technical background, I'd love to connect.
+            </p>
+
+            <div class="contact-methods">
+              <!-- Email Item -->
+              <div class="contact-method-item">
+                <div class="contact-method-left">
+                  <div class="contact-method-icon">✉️</div>
+                  <div>
+                    <span class="contact-method-label">Direct Email</span>
+                    <h4 class="contact-method-value">
+                      <a href="mailto:vedalakshmi777@gmail.com">vedalakshmi777@gmail.com</a>
+                    </h4>
+                  </div>
+                </div>
+                <button class="btn-copy" data-copy="vedalakshmi777@gmail.com" title="Copy email address" aria-label="Copy email">
+                  <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                </button>
+              </div>
+
+              <!-- Phone Item -->
+              <div class="contact-method-item">
+                <div class="contact-method-left">
+                  <div class="contact-method-icon">📞</div>
+                  <div>
+                    <span class="contact-method-label">Phone / Mobile</span>
+                    <h4 class="contact-method-value">
+                      <a href="tel:+918129972212">+91 8129972212</a>
+                    </h4>
+                  </div>
+                </div>
+                <button class="btn-copy" data-copy="+918129972212" title="Copy phone number" aria-label="Copy phone">
+                  <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                </button>
+              </div>
+
+              <!-- Location Item -->
+              <div class="contact-method-item">
+                <div class="contact-method-left">
+                  <div class="contact-method-icon">📍</div>
+                  <div>
+                    <span class="contact-method-label">Location</span>
+                    <h4 class="contact-method-value">Kochi / Kozhikode, Kerala, India</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Download Resume CTA in Contact -->
+            <a href="assets/docs/Vedalakshmi_B_S_Resume.pdf" download="Vedalakshmi_B_S_Resume.pdf" class="btn-primary" style="width: 100%; justify-content: center;">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              <span>Download Official Resume (PDF)</span>
+            </a>
+          </div>
+
+          <!-- Direct Interactive Form -->
+          <div class="contact-form-card">
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Your Name *</label>
+                <input type="text" id="contact-name" class="form-control" placeholder="e.g. Rahul Nair" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Your Email *</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="e.g. recruiter@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subject</label>
+                <input type="text" id="contact-subject" class="form-control" placeholder="e.g. SDE Internship Opportunity" value="SDE Internship / Opportunity Inquiry">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message *</label>
+                <textarea id="contact-message" class="form-control" rows="4" placeholder="Hello Vedalakshmi, we would like to discuss..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+                <span>Send Message</span>
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Project Deep-Dive Modal Window
+       ========================================================================= -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-window">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      <h3 class="modal-title" id="modal-title">Project Title</h3>
+      <p class="modal-category" id="modal-category">Project Category</p>
+      
+      <div class="modal-body">
+        <h4 class="modal-section-title">Overview</h4>
+        <p id="modal-overview">Project description...</p>
+
+        <h4 class="modal-section-title">Key Architectural Features</h4>
+        <ul class="modal-bullet-list" id="modal-features"></ul>
+
+        <h4 class="modal-section-title">Technologies Used</h4>
+        <div class="project-tech-list" id="modal-tech-tags" style="margin-bottom: 24px;"></div>
+
+        <div id="modal-actions" style="display: flex; gap: 12px; margin-top: 20px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- =========================================================================
+       Footer
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span>&lt;Vedalakshmi B S /&gt;</span> &mdash; B.Tech Computer Science &amp; Engineering
+      </div>
+
+      <div class="footer-links">
+        <a href="https://github.com/veda1823" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/vedalakshmi-b-s-a53536385" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.cloudskillsboost.google/public_profiles/78771005-3f91-4b56-a97d-d9c520f4bd51" target="_blank" rel="noopener noreferrer">Cloud Boost</a>
+        <a href="mailto:vedalakshmi777@gmail.com">Email</a>
+      </div>
+
+      <a href="#hero" class="btn-back-to-top" aria-label="Back to top">
+        <span>Back to top</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
