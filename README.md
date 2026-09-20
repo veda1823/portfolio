@@ -9,7 +9,7 @@ Welcome to the source repository for my personal developer portfolio website. Bu
 
 ## 👩‍💻 About Me
 
-- **Education**: B.Tech in Computer Science and Engineering at **Muthoot Institute of Technology and Science (MITS)**, Kochi (CGPA: **8.96**)
+- **Education**: B.Tech in Computer Science and Engineering at **Muthoot Institute of Technology and Science (MITS)**, Kochi (CGPA: **9.04**)
 - **Academic Milestones**: 100% in 10th Standard (SSLC) & 98.6% in 12th Higher Secondary Education
 - **Experience**: UI Development Intern at **SwarmLens Pvt. Ltd.** (2025)
 - **Primary Focus**: Full-stack web development, assistive computer vision applications, and relational database systems
