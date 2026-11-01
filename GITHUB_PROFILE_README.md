@@ -119,7 +119,7 @@
 
 <div align="center">
   <img src="https://github-readme-stats-fast.vercel.app/api?username=veda1823&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Veda's GitHub Stats" width="48%" />
-  <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=veda1823&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="Top Languages" width="48%" />
+  <img src="https://raw.githubusercontent.com/veda1823/veda1823/main/github-all-langs.svg" alt="Most Used Languages Across All Projects" width="48%" />
 </div>
 
 <div align="center" style="margin-top: 10px;">

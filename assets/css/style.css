@@ -1435,6 +1435,9 @@ img, svg {
 .lang-py { background: #3572a5; }
 .lang-java { background: #b07219; }
 .lang-html { background: #e34c26; }
+.lang-php { background: #777bb4; }
+.lang-blade { background: #f05340; }
+.lang-ts { background: #3178c6; }
 
 /* --------------------------------------------------------------------------
    13. Contact Section

@@ -1,0 +1,55 @@
+<svg width="340" height="195" viewBox="0 0 340 195" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Most Used Languages Across All Projects">
+  <style>
+    .header { font: 600 18px 'Segoe UI', Ubuntu, -apple-system, sans-serif; fill: #70a5fd; }
+    .lang-name { font: 400 11.5px 'Segoe UI', Ubuntu, -apple-system, sans-serif; fill: #a9b1d6; }
+    .lang-pct { font: 600 11.5px 'Segoe UI', Ubuntu, -apple-system, sans-serif; fill: #7982a9; }
+  </style>
+
+  <rect width="340" height="195" rx="6" fill="#1a1b27" />
+
+  <text x="25" y="35" class="header">Most Used Languages</text>
+
+  <g transform="translate(25, 52)">
+    <mask id="bar-mask">
+      <rect x="0" y="0" width="290" height="8" rx="4" fill="#ffffff" />
+    </mask>
+    <rect mask="url(#bar-mask)" x="0.00" y="0" width="93.02" height="8" fill="#f05340" />
+    <rect mask="url(#bar-mask)" x="93.02" y="0" width="69.33" height="8" fill="#777bb4" />
+    <rect mask="url(#bar-mask)" x="162.36" y="0" width="64.52" height="8" fill="#f1e05a" />
+    <rect mask="url(#bar-mask)" x="226.88" y="0" width="32.03" height="8" fill="#e34c26" />
+    <rect mask="url(#bar-mask)" x="258.90" y="0" width="16.86" height="8" fill="#563d7c" />
+    <rect mask="url(#bar-mask)" x="275.76" y="0" width="11.91" height="8" fill="#3572A5" />
+    <rect mask="url(#bar-mask)" x="287.68" y="0" width="2.32" height="8" fill="#3178c6" />
+  </g>
+
+  <g transform="translate(25, 78)">
+    <g transform="translate(0, 0)">
+      <circle cx="5" cy="6" r="5" fill="#f05340" />
+      <text x="16" y="10" class="lang-name">Blade <tspan class="lang-pct">32.1%</tspan></text>
+    </g>
+    <g transform="translate(0, 25)">
+      <circle cx="5" cy="6" r="5" fill="#777bb4" />
+      <text x="16" y="10" class="lang-name">PHP <tspan class="lang-pct">23.9%</tspan></text>
+    </g>
+    <g transform="translate(0, 50)">
+      <circle cx="5" cy="6" r="5" fill="#f1e05a" />
+      <text x="16" y="10" class="lang-name">JavaScript <tspan class="lang-pct">22.2%</tspan></text>
+    </g>
+    <g transform="translate(0, 75)">
+      <circle cx="5" cy="6" r="5" fill="#e34c26" />
+      <text x="16" y="10" class="lang-name">HTML <tspan class="lang-pct">11.0%</tspan></text>
+    </g>
+    <g transform="translate(145, 0)">
+      <circle cx="5" cy="6" r="5" fill="#563d7c" />
+      <text x="16" y="10" class="lang-name">CSS <tspan class="lang-pct">5.8%</tspan></text>
+    </g>
+    <g transform="translate(145, 25)">
+      <circle cx="5" cy="6" r="5" fill="#3572A5" />
+      <text x="16" y="10" class="lang-name">Python <tspan class="lang-pct">4.1%</tspan></text>
+    </g>
+    <g transform="translate(145, 50)">
+      <circle cx="5" cy="6" r="5" fill="#3178c6" />
+      <text x="16" y="10" class="lang-name">TypeScript <tspan class="lang-pct">0.8%</tspan></text>
+    </g>
+  </g>
+</svg>
