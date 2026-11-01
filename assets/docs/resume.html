@@ -7,7 +7,7 @@
   <style>
     @page {
       size: A4;
-      margin: 18mm 16mm;
+      margin: 14mm 16mm;
     }
     * {
       box-sizing: border-box;
@@ -15,17 +15,17 @@
       padding: 0;
     }
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
       color: #1e293b;
-      line-height: 1.45;
+      line-height: 1.4;
       background: #f8fafc;
       padding: 24px;
     }
     .page {
-      max-width: 800px;
+      max-width: 820px;
       margin: 0 auto;
       background: #ffffff;
-      padding: 40px;
+      padding: 36px 42px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
       border-radius: 6px;
     }
@@ -45,25 +45,24 @@
     }
     .header {
       text-align: center;
-      border-bottom: 2px solid #0f172a;
-      padding-bottom: 12px;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
     .header h1 {
-      font-size: 26px;
+      font-size: 24px;
       letter-spacing: 1.5px;
-      font-weight: 700;
+      font-weight: 800;
       color: #0f172a;
       margin-bottom: 6px;
       text-transform: uppercase;
     }
     .contact-links {
-      font-size: 13px;
+      font-size: 12.5px;
       color: #475569;
       display: flex;
       justify-content: center;
+      align-items: center;
       flex-wrap: wrap;
-      gap: 8px 14px;
+      gap: 6px 10px;
     }
     .contact-links a {
       color: #0284c7;
@@ -73,73 +72,81 @@
       text-decoration: underline;
     }
     .section {
-      margin-bottom: 16px;
+      margin-top: 14px;
     }
     .section-title {
-      font-size: 15px;
-      font-weight: 700;
-      text-transform: uppercase;
+      font-size: 13.5px;
+      font-weight: 800;
       color: #0f172a;
-      border-bottom: 1px solid #cbd5e1;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1.5px solid #0f172a;
       padding-bottom: 3px;
       margin-bottom: 8px;
-      letter-spacing: 0.8px;
     }
-    .profile-text {
-      font-size: 13px;
-      text-align: justify;
+    .summary-text {
+      font-size: 12.5px;
       color: #334155;
+      text-align: justify;
+      line-height: 1.45;
     }
     .item {
       margin-bottom: 10px;
+    }
+    .item:last-child {
+      margin-bottom: 0;
     }
     .item-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 700;
       color: #0f172a;
+    }
+    .item-date {
+      font-size: 12px;
+      color: #475569;
+      font-weight: 600;
+      white-space: nowrap;
     }
     .item-sub {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
-      font-size: 13px;
+      font-size: 12px;
       color: #475569;
+      margin-bottom: 3px;
       font-style: italic;
-      margin-top: 1px;
-      margin-bottom: 4px;
     }
-    .item-date, .item-location {
+    .item-tech {
+      font-size: 12px;
+      color: #0369a1;
       font-weight: 600;
       font-style: normal;
-      color: #64748b;
-      font-size: 12.5px;
     }
     ul {
       list-style-type: disc;
       padding-left: 18px;
-      font-size: 12.5px;
-      color: #334155;
+      margin-top: 3px;
     }
     li {
-      margin-bottom: 3px;
+      font-size: 12px;
+      color: #334155;
+      margin-bottom: 2px;
+      line-height: 1.4;
     }
-    .skills-grid {
-      font-size: 12.5px;
+    .skills-block {
+      font-size: 12px;
+      line-height: 1.6;
       color: #334155;
     }
-    .skills-row {
-      margin-bottom: 4px;
-    }
-    .skills-label {
+    .skills-category {
       font-weight: 700;
       color: #0f172a;
     }
-    .print-bar {
-      max-width: 800px;
-      margin: 0 auto 16px;
+    .download-bar {
+      max-width: 820px;
+      margin: 0 auto 16px auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -148,183 +155,189 @@
       padding: 12px 20px;
       border-radius: 6px;
     }
-    .btn {
+    .download-bar a {
+      color: #ffffff;
       background: #0284c7;
-      color: white;
-      border: none;
-      padding: 8px 16px;
+      padding: 6px 14px;
       border-radius: 4px;
-      cursor: pointer;
-      font-weight: 600;
       text-decoration: none;
       font-size: 13px;
+      font-weight: 600;
       display: inline-flex;
       align-items: center;
       gap: 6px;
     }
-    .btn:hover {
+    .download-bar a:hover {
       background: #0369a1;
     }
   </style>
 </head>
 <body>
-  <div class="print-bar no-print">
-    <span><strong>Vedalakshmi B S</strong> &mdash; Professional Resume</span>
-    <button class="btn" onclick="window.print()">
-      <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/><path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v4a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/></svg>
-      Print / Save as PDF
-    </button>
+  <div class="download-bar no-print">
+    <span>Official Resume &mdash; Vedalakshmi B S</span>
+    <div>
+      <a href="Vedalakshmi_B_S_Resume.pdf" download="Vedalakshmi_B_S_Resume.pdf">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+        Download PDF
+      </a>
+      <a href="javascript:window.print()" style="margin-left: 8px; background: #334155;">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+        Print
+      </a>
+    </div>
   </div>
 
   <div class="page">
     <header class="header">
-      <h1>Vedalakshmi B S</h1>
+      <h1>VEDALAKSHMI B S</h1>
       <div class="contact-links">
+        <span>Kochi, Kerala</span>
+        <span>&bull;</span>
         <span>+91 8129972212</span>
         <span>&bull;</span>
         <a href="mailto:vedalakshmi777@gmail.com">vedalakshmi777@gmail.com</a>
         <span>&bull;</span>
+        <a href="https://veda1823.github.io/portfolio/" target="_blank" rel="noopener">Portfolio</a>
+        <span>&bull;</span>
         <a href="https://www.linkedin.com/in/vedalakshmi-b-s-a53536385" target="_blank" rel="noopener">LinkedIn</a>
         <span>&bull;</span>
         <a href="https://github.com/veda1823" target="_blank" rel="noopener">GitHub</a>
+        <span>&bull;</span>
+        <a href="https://leetcode.com/u/Vedalakshmi05/" target="_blank" rel="noopener">LeetCode</a>
+        <span>&bull;</span>
+        <a href="https://codeforces.com/profile/Vedalakshmi" target="_blank" rel="noopener">Codeforces</a>
+        <span>&bull;</span>
+        <a href="https://www.skills.google/public_profiles/78771005-3f91-4b56-a97d-d9c520f4bd51" target="_blank" rel="noopener">Google Skills</a>
       </div>
     </header>
 
     <section class="section">
-      <h2 class="section-title">Profile</h2>
-      <p class="profile-text">
-        Computer Science undergraduate with strong interest in software development, problem solving, and full-stack technologies. Skilled in Java, Python, and web development with hands-on experience through academic projects and collaborative learning. Passionate about building practical applications and continuously improving technical skills.
+      <h2 class="section-title">PROFESSIONAL SUMMARY</h2>
+      <p class="summary-text">
+        High-achieving Computer Science undergraduate (<strong>9.04 CGPA</strong>) with hands-on experience in full-stack web development, UI engineering, and LLM API integrations. Skilled in JavaScript (React, Node.js), Python, Java, and SQL. Proven ability to build accessible software applications, optimize frontend performance, and deploy scalable tools in agile, team-based environments.
       </p>
     </section>
 
     <section class="section">
-      <h2 class="section-title">Education</h2>
+      <h2 class="section-title">EDUCATION</h2>
       <div class="item">
         <div class="item-header">
-          <span>Muthoot Institute of Technology and Science</span>
-          <span class="item-location">Kochi, Kerala</span>
-        </div>
-        <div class="item-sub">
-          <span>Bachelor of Technology in Computer Science and Engineering &mdash; <strong>CGPA: 9.04</strong></span>
+          <span>B.Tech in Computer Science &amp; Engineering | Muthoot Institute of Technology &amp; Science</span>
           <span class="item-date">2023 &ndash; Present</span>
         </div>
-      </div>
-      <div class="item">
-        <div class="item-header">
-          <span>Nanminda Higher Secondary School</span>
-          <span class="item-location">Kozhikode, Kerala</span>
-        </div>
         <div class="item-sub">
-          <span>12th Standard (Higher Secondary Education) &mdash; <strong>Percentage: 98.6%</strong></span>
-          <span class="item-date">2020 &ndash; 2022</span>
+          <span><strong>CGPA: 9.04 / 10.0</strong></span>
         </div>
       </div>
       <div class="item">
         <div class="item-header">
-          <span>Nanminda Higher Secondary School</span>
-          <span class="item-location">Kozhikode, Kerala</span>
+          <span>Higher Secondary (12th): Nanminda Higher Secondary School</span>
+          <span class="item-date">98.6%</span>
         </div>
-        <div class="item-sub">
-          <span>10th Standard (SSLC) &mdash; <strong>Percentage: 100%</strong></span>
-          <span class="item-date">2019 &ndash; 2020</span>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span>SSLC (10th): Nanminda Higher Secondary School</span>
+          <span class="item-date">100%</span>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <h2 class="section-title">Experience</h2>
+      <h2 class="section-title">TECHNICAL SKILLS</h2>
+      <div class="skills-block">
+        <div><span class="skills-category">Languages:</span> JavaScript, Python, Java, C, HTML/CSS, SQL (MySQL)</div>
+        <div><span class="skills-category">Frameworks &amp; Libs:</span> React.js, Node.js, Express.js, OpenCV, MediaPipe</div>
+        <div><span class="skills-category">Tools &amp; Cloud:</span> Git, GitHub, VS Code, Vercel, Postman, Google Cloud Basics</div>
+        <div><span class="skills-category">Core Concepts:</span> Full-Stack Web Development, RESTful APIs, Object-Oriented Programming (OOP), Relational Databases</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">PROFESSIONAL EXPERIENCE</h2>
       <div class="item">
         <div class="item-header">
-          <span>UI Development Intern &ndash; SwarmLens</span>
-          <span class="item-date">2025</span>
+          <span>UI Development Intern | SwarmLens Pvt. Ltd.</span>
+          <span class="item-date">Jan 2025 &ndash; Present</span>
         </div>
         <div class="item-sub">
-          <span>SwarmLens Pvt. Ltd.</span>
-          <span class="item-location">Kochi, Kerala</span>
+          <span>Kochi, Kerala</span>
         </div>
         <ul>
-          <li>Worked on UI development tasks and collaborative software development activities.</li>
-          <li>Gained exposure to professional development workflows and team-based project environments.</li>
-          <li>Improved understanding of frontend development and software engineering practices.</li>
+          <li>Developed responsive user interfaces and modular frontend components using modern web technologies.</li>
+          <li>Collaborated with cross-functional software teams following version control workflows and agile practices.</li>
+          <li>Optimized frontend elements to enhance application responsiveness, load performance, and user experience.</li>
         </ul>
       </div>
     </section>
 
     <section class="section">
-      <h2 class="section-title">Technical Skills</h2>
-      <div class="skills-grid">
-        <div class="skills-row"><span class="skills-label">Programming Languages:</span> C, Java, Python, JavaScript</div>
-        <div class="skills-row"><span class="skills-label">Web Technologies:</span> HTML, CSS, React</div>
-        <div class="skills-row"><span class="skills-label">Database:</span> MySQL, Relational DBMS</div>
-        <div class="skills-row"><span class="skills-label">Tools &amp; Platforms:</span> Git, GitHub, VS Code</div>
-        <div class="skills-row"><span class="skills-label">Cloud Technologies:</span> Google Cloud Basics (Silver League)</div>
-        <div class="skills-row"><span class="skills-label">Concepts:</span> Object-Oriented Programming (OOP), Problem Solving, Data Structures</div>
-        <div class="skills-row"><span class="skills-label">Soft Skills:</span> Teamwork, Communication, Collaboration</div>
+      <h2 class="section-title">PROJECTS</h2>
+      <div class="item">
+        <div class="item-header">
+          <span>AskSphere &ndash; AI-Driven Q&amp;A Platform</span>
+          <span class="item-tech">Node.js, Express.js, Groq API, JavaScript, REST API</span>
+        </div>
+        <ul>
+          <li>Engineered a low-latency interactive Q&amp;A web application integrating the Groq API for real-time LLM inference.</li>
+          <li>Built scalable Express.js backend endpoints to manage client requests and ensure low query response times.</li>
+          <li>Implemented system validation and payload handling for edge-case error prevention and smooth API performance.</li>
+        </ul>
       </div>
-    </section>
 
-    <section class="section">
-      <h2 class="section-title">Projects</h2>
       <div class="item">
         <div class="item-header">
           <span>KTU Activity Point Calculator Portal</span>
-          <span class="item-date">2025</span>
-        </div>
-        <div class="item-sub">
-          <span>React, HTML, CSS, JavaScript, Node.js, Express &bull; Personal Mini Project</span>
-          <span>Live Demo: <a href="https://clawhub.ai/veda1823/veda-greetings" target="_blank" rel="noopener">clawhub.ai</a></span>
+          <span class="item-tech">React.js, Node.js, Express, CSS, Vercel</span>
         </div>
         <ul>
-          <li>Developed a responsive web portal for calculating and managing KTU activity points.</li>
-          <li>Designed Admin, Teacher, and Student interfaces with responsive UI components.</li>
-          <li>Implemented dashboard layouts, upload modules, and frontend pages using React and CSS.</li>
-          <li>Worked with Node.js and Express for backend routing and application functionality.</li>
-          <li>Used Git and GitHub for version control and collaborative development; deployed via Vercel.</li>
+          <li>Developed a full-stack web application featuring distinct interfaces for Admins, Teachers, and Students.</li>
+          <li>Integrated automated calculation utilities, secure dashboard layouts, and document upload modules.</li>
+          <li>Configured backend routes in Express and deployed the application on Vercel for public web access.</li>
         </ul>
       </div>
 
       <div class="item">
         <div class="item-header">
-          <span>Sign Language Detector</span>
-          <span class="item-date">Python, OpenCV, MediaPipe</span>
+          <span>Real-Time Sign Language Detector</span>
+          <span class="item-tech">Python, OpenCV, MediaPipe, Text-to-Speech</span>
         </div>
         <ul>
-          <li>Built a real-time sign language detection system using Python, OpenCV, and MediaPipe.</li>
-          <li>Implemented hand gesture recognition and landmark tracking for accurate detection.</li>
-          <li>Integrated text-to-speech functionality to convert gestures into spoken output.</li>
-          <li>Designed an assistive solution to improve accessibility and human-computer interaction.</li>
+          <li>Built an assistive computer vision application to detect and classify hand gestures in real time.</li>
+          <li>Leveraged MediaPipe for landmark tracking and hand tracking model extraction.</li>
+          <li>Integrated a Text-to-Speech engine to instantly convert recognized hand gestures into spoken audio output.</li>
         </ul>
       </div>
 
       <div class="item">
         <div class="item-header">
-          <span>Hostel Allocator</span>
-          <span class="item-date">SQL, DBMS</span>
+          <span>Hostel Allocation Management System</span>
+          <span class="item-tech">MySQL, Relational Databases, SQL</span>
         </div>
         <ul>
-          <li>Developed a hostel management system for student registration and room allocation.</li>
-          <li>Implemented room management and occupancy tracking using a relational database.</li>
-          <li>Automated allocation processes to improve efficiency and reduce manual errors.</li>
-          <li>Created an admin dashboard for monitoring hostel occupancy and student records.</li>
+          <li>Designed a relational database architecture to automate room assignments and track student occupancy.</li>
+          <li>Developed an administrative reporting dashboard to manage room capacities and reduce allocation errors.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span>GRIEVE &ndash; Grievance Redressal System</span>
+          <span class="item-tech">PHP, Laravel, MySQL, HTML, CSS, JavaScript</span>
+        </div>
+        <ul>
+          <li>Developed a web-based platform enabling users to submit, track, and manage grievances efficiently.</li>
+          <li>Implemented user and admin modules with complaint status tracking and centralized grievance management.</li>
         </ul>
       </div>
     </section>
 
     <section class="section">
-      <h2 class="section-title">Certifications &amp; Events</h2>
-      <ul>
-        <li>Completed NPTEL Programming in Java certification offered by IIT Kharagpur.</li>
-        <li>Completed End-to-End Project Lifecycle using MERN Stack course conducted by Zero Pixels Technologies.</li>
-        <li>Completed Web Development Internship conducted by QnaydS LLP.</li>
-        <li>Completed 100xDevs Web Development + DevOps.</li>
-        <li>Achieved Silver League in Google Cloud Skills Boost.</li>
-        <li>Participated in IEEE Techsortium 2025.</li>
-        <li>Participated in IEEE YESS'24 (Yearly Engineering Students Summit).</li>
-        <li>Participated in IEEE Techsortium Cloud Computing Workshop.</li>
-        <li>Participated in Tathva'23 conducted by NIT Calicut.</li>
-        <li>Completed Cambridge Linguaskill English Assessment (CEFR Level B1).</li>
-        <li>Completed multiple technical workshops in Web Development and Cloud Computing.</li>
-      </ul>
+      <h2 class="section-title">CERTIFICATIONS &amp; ACHIEVEMENTS</h2>
+      <div class="skills-block">
+        <div><span class="skills-category">Certifications:</span> NPTEL Programming in Java (IIT Kharagpur), 100xDevs Web Development + DevOps, End-to-End MERN Stack Lifecycle (Zero Pixels), Google Skills Public Profile.</div>
+        <div style="margin-top: 4px;"><span class="skills-category">Achievements &amp; Events:</span> Google Cloud Skills Boost (Silver League), IEEE YESS'24, IEEE Techsortium Cloud Computing Workshop, Tathva '23 (NIT Calicut), Cambridge Linguaskill English Assessment (CEFR B1).</div>
+      </div>
     </section>
   </div>
 </body>

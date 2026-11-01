@@ -309,6 +309,20 @@ function initSkillsFilter() {
    6. Project Deep Dive Modal System
    -------------------------------------------------------------------------- */
 const projectData = {
+  asksphere: {
+    title: 'AskSphere – AI-Driven Q&A Platform',
+    category: 'Full-Stack AI Application · Real-Time LLM Inference',
+    overview: 'Engineered a low-latency interactive Q&A web application integrating the Groq API for lightning-fast real-time LLM inference, dynamic AI responses, and modern responsive UI.',
+    features: [
+      'Integrated Groq API for ultra-low latency real-time LLM question-answering inference.',
+      'Constructed scalable Node.js and Express.js backend endpoints to manage prompt payloads and stream responses.',
+      'Implemented robust request validation and error-handling middleware preventing edge-case failures.',
+      'Modern, highly responsive frontend built with React 19 and Tailwind CSS.'
+    ],
+    tech: ['Node.js', 'Express.js', 'Groq API', 'JavaScript', 'React 19', 'Tailwind CSS', 'REST API'],
+    demoUrl: null,
+    repoUrl: 'https://github.com/veda1823/AskSphere'
+  },
   ktu: {
     title: 'KTU Activity Point Calculator Portal',
     category: 'Full-Stack Web Portal · Academic Graduation Workflow',
@@ -351,6 +365,20 @@ const projectData = {
     tech: ['SQL', 'MySQL', 'DBMS', 'Relational Schemas', 'Query Optimization'],
     demoUrl: null,
     repoUrl: 'https://github.com/veda1823'
+  },
+  grieve: {
+    title: 'GRIEVE – Grievance Redressal System',
+    category: 'Institutional Web Platform · Enterprise Workflow',
+    overview: 'A centralized institutional grievance redressal system enabling students and staff to submit, track, and manage grievances transparently with multi-role access controls.',
+    features: [
+      'Developed end-to-end complaint logging and lifecycle tracking modules with live status updates.',
+      'Built separate secure dashboards for general users and administrative authorities.',
+      'Structured relational MySQL database schema ensuring data confidentiality and audit logs.',
+      'Implemented clean server-side rendering and MVC pattern using PHP and Laravel Blade templates.'
+    ],
+    tech: ['PHP', 'Laravel', 'Blade', 'MySQL', 'HTML5', 'CSS3', 'JavaScript'],
+    demoUrl: null,
+    repoUrl: 'https://github.com/veda1823/Grievance-Redressal-System'
   },
   workspace: {
     title: 'Team Workspace Manager',
